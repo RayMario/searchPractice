@@ -27,7 +27,7 @@ public class SuggestionController {
 
         //使用ArrayList方式的倒排索引执行补全查询
         //构建测试用例：
-        String[] testExamles = new String[]{"hel e","he","","wo","hes"};
+        String[] testExamles = new String[]{"hel e","he","","wo","hes"," he "};
         StringBuilder stringBuilder = new StringBuilder();
         for(String testExample:testExamles) {
             List<Integer> suggestionIdList1 = arrayListSuggestionService.getSuggestion(testExample);

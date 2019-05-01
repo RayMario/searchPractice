@@ -36,6 +36,9 @@ public class ArrayListSuggestionService {
     }
 
     public List<Integer> getSuggestion(String str){
+        if(str != ""){
+            str = Util.removeSpace(str);
+        }
         Map<Integer,Short> curMap = new HashMap<>();
         List<Integer> suggestion = new ArrayList<>();
         dfs(suggestion,str,curMap,0);

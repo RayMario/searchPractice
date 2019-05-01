@@ -38,3 +38,4 @@ CREATE TABLE `suggestions` (
 测试用例——，输出结果—— [];
 测试用例——wo，输出结果—— [];
 测试用例——hes，输出结果—— [];
+测试用例——（空格）he（空格），输出结果—— [hello world, help, hello enum] ;

@@ -48,6 +48,9 @@ public class HashMapSuggestionService {
     //因此总的查询时间应当是O（N*M*L），其中N为用户输入的单词的长度，M为字母对应的倒排索引单词个数，L为字母在某个单词中的位置列表长度。
     //比如对hello world与help两个单词当中的所有字母构建了倒排索引，现在输入hewl，则本次查询次数为输入长度4*首字母h对应的单词个数2*l的位置列表长度3.
     public List<Integer> getSuggestion(String str){
+        if(str != ""){
+            str = Util.removeSpace(str);
+        }
         Map<Integer,Short> curMap = new HashMap<>();
         List<Integer> suggestion = new ArrayList<>();
         dfs(suggestion,str,curMap,0);
